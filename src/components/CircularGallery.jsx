@@ -75,25 +75,24 @@ export default function CircularGallery() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-                backfaceVisibility: "blur",
-                blur: "20px"
             }}
         >
-        {!isMobile && (
-            <div className="absolute left-20 top-1/6 z-30 text-white max-w-md backdrop-blur-[2px]">
-                <h1 className="text-6xl font-semibold leading-tight mb-6">
-                    Summer <br /> bensa <br /> cool outfit
-                </h1>
+            <div className="absolute inset-0 backdrop-blur-[2px] bg-black/30 z-0" />
+            {!isMobile && (
+                <div className="absolute left-20 top-1/6 z-30 text-white max-w-md backdrop-blur-[2px]">
+                    <h1 className="text-6xl font-semibold leading-tight mb-6">
+                        Summer <br /> bensa <br /> cool outfit
+                    </h1>
 
-            </div>
+                </div>
             )}
-             {!isMobile && (
-            <div className="absolute left-20 bottom-30 z-30 text-white max-w-md backdrop-blur-lg px-6 py-4 rounded-xl shadow-lg">
-                <p className="text-sm opacity-80">
-                    <span className="text-2xl font-semibold leading-tight mb-6">We follow <br /> trends</span> <br />
-                    <span>and bring modern fashion for everyone.</span>
-                </p>
-            </div>
+            {!isMobile && (
+                <div className="absolute left-20 bottom-30 z-30 text-white max-w-md backdrop-blur-lg px-6 py-4 rounded-xl shadow-lg">
+                    <p className="text-sm opacity-80">
+                        <span className="text-2xl font-semibold leading-tight mb-6">We follow <br /> trends</span> <br />
+                        <span>and bring modern fashion for everyone.</span>
+                    </p>
+                </div>
             )}
             <div className="absolute bottom-0 left-0 w-full h-[45%]
                     bg-gradient-to-t
@@ -130,20 +129,15 @@ export default function CircularGallery() {
                             style={{ transformOrigin: "bottom center" }}
                         />
                     </AnimatePresence>
-
-
-
                 </div>
-
             </div>
             {/* HALF CIRCLE THUMBNAILS */}
 
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] h-[280px] z-30 ">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] h-[280px] z-30">
                 {Array.from({ length: visibleCount }).map((_, i) => {
                     const offset = i - centerIndex;
                     const item = getItem(offset);
                     const pos = getPosition(i);
-
                     const isSelected = i === centerIndex;
 
                     return (
@@ -157,29 +151,31 @@ export default function CircularGallery() {
                             animate={{
                                 x: pos.x,
                                 y: pos.y,
-                                scale: isSelected ? 1.15 : 1 - Math.abs(i - centerIndex) * 0.15,
-                                opacity: isSelected ? 1 : 0.75
+                                scale: isSelected
+                                    ? 1.2
+                                    : 1 - Math.abs(i - centerIndex) * 0.15,
+                                opacity: isSelected ? 1 : 0.7,
                             }}
                             transition={{
                                 type: "spring",
                                 stiffness: 120,
-                                damping: 14
+                                damping: 14,
                             }}
                             className={`
-          absolute rounded-full cursor-pointer
-          flex items-center justify-center
-          bg-gray-200/20
-          shadow-[0_6px_20px_rgba(0,0,0,0.25)]
-          ${isSelected
-                                    ? "border-3 border-gray-200/20"
-                                    : "border-2 border-gray-200/20"}
-        `}
+                absolute rounded-full cursor-pointer
+                flex items-center justify-center
+                bg-white/10 backdrop-blur-md
+                ${isSelected
+                                    ? "ring-4 ring-white shadow-[0_0_30px_rgba(255,255,255,0.6)]"
+                                    : "ring-2 ring-white/30 shadow-[0_-10px_25px_rgba(0,0,0,0.35)]"
+                                }
+              `}
                             style={{
-                                width: isSelected ? "90px" : "70px",
-                                height: isSelected ? "90px" : "70px",
+                                width: "80px",
+                                height: "80px",
                                 left: "50%",
                                 bottom: "0%",
-                                translateX: "-50%"
+                                translateX: "-50%",
                             }}
                         >
                             <img
@@ -192,10 +188,10 @@ export default function CircularGallery() {
                 })}
             </div>
             {!isMobile && (
-            <div className="absolute right-20 h-[700px]  flex items-center justify-center text-white text-9xl tracking-[30px] font-bold opacity-30 rotate-180"
-                style={{ writingMode: "vertical-rl" }}>
-                STYLE
-            </div>
+                <div className="absolute right-20 h-[700px]  flex items-center justify-center text-white text-9xl tracking-[30px] font-bold opacity-30 rotate-180"
+                    style={{ writingMode: "vertical-rl" }}>
+                    STYLE
+                </div>
             )}
         </div>
     );
