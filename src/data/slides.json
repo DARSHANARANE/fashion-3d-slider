@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "image": "/images/model6.png",
+    "bgColor": "/bg-Img/Red.jpg",
+    "title": "Green Collection",
+    "year": "2024"
+  },
+  {
+    "id": 2,
+    "image": "/images/model2.png",
+    "bgColor": "/bg-Img/Blue1.JPG",
+    "title": "Pink Collection",
+    "year": "2024"
+  },
+  {
+    "id": 3,
+    "image": "/images/model8.png",
+    "bgColor": "/bg-Img/purple.jpg",
+    "title": "Blue Collection",
+    "year": "2024"
+  },
+  {
+    "id": 4,
+    "image": "/images/model4.png",
+    "bgColor": "/bg-Img/Pink.jpg",
+    "title": "Yellow Collection",
+    "year": "2024"
+  },
+  {
+    "id": 5,
+    "image": "/images/model5.png",
+    "bgColor": "/bg-Img/Yellow.jpg",
+    "title": "Teal Collection",
+    "year": "2024"
+  },
+  {
+    "id": 6,
+    "image": "/images/model1.png",
+    "bgColor": "/bg-Img/red1.png",
+    "title": "Purple Collection",
+    "year": "2024"
+  },
+  {
+    "id": 7,
+    "image": "/images/model2.png",
+    "bgColor": "/bg-Img/Blue1.JPG",
+    "title": "Indigo Collection",
+    "year": "2024"
+  },
+  {
+    "id": 8,
+    "image": "/images/model3.png",
+    "bgColor": "/bg-Img/purple.jpg",
+    "title": "Magenta Collection",
+    "year": "2024"
+  },
+  {
+    "id": 9,
+    "image": "/images/model4.png",
+    "bgColor": "/bg-Img/Pink.jpg",
+    "title": "Cyan Collection",
+    "year": "2024"
+  },
+  {
+    "id": 10,
+   "image": "/images/model5.png",
+    "bgColor": "/bg-Img/Yellow.jpg",
+    "title": "Lime Collection",
+    "year": "2024"
+  },
+  {
+    "id": 11,
+     "image": "/images/model1.png",
+    "bgColor": "/bg-Img/red1.png",
+    "title": "Orange Collection",
+    "year": "2024"
+  },
+  {
+    "id": 12,
+    "image": "/images/model2.png",
+    "bgColor": "/bg-Img/Blue1.JPG",
+    "title": "Blue Grey Collection",
+    "year": "2024"
+  },
+  {
+    "id": 13,
+    "image": "/images/model4.png",
+    "bgColor": "/bg-Img/Pink.jpg",
+    "title": "Lemon Collection",
+    "year": "2024"
+  },
+  {
+    "id": 14,
+    "image": "/images/model3.png",
+    "bgColor": "/bg-Img/purple.jpg",
+    "title": "Deep Purple Collection",
+    "year": "2024"
+  },
+  {
+    "id": 15,
+    "image": "/images/model5.png",
+    "bgColor": "/bg-Img/Yellow.jpg",
+    "title": "Light Blue Collection",
+    "year": "2024"
+  }
+
+]
